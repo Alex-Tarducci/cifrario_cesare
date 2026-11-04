@@ -15,8 +15,16 @@ namespace cifrario_cesare
             {
                 MessageBox.Show("il carattere non è stato inserito");
             }
-            
-              
+
+            else
+            {
+                for (int i = 0; i < txt_n1.Text.Length; i++)
+                { 
+
+                }
+
+
+            }   
         }
     }
 }
