@@ -6,5 +6,17 @@ namespace cifrario_cesare
         {
             InitializeComponent();
         }
+
+        private void btn_n1_Click(object sender, EventArgs e)
+        {
+            string carattere = txt_n1.Text;
+            
+            if (  string.IsNullOrEmpty(carattere))
+            {
+                MessageBox.Show("il carattere non è stato inserito");
+            }
+            
+              
+        }
     }
 }

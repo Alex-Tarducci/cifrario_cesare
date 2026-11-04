@@ -56,7 +56,7 @@
             // 
             // txt_n1
             // 
-            txt_n1.Location = new Point(144, 135);
+            txt_n1.Location = new Point(133, 135);
             txt_n1.Name = "txt_n1";
             txt_n1.Size = new Size(100, 23);
             txt_n1.TabIndex = 1;
@@ -65,12 +65,13 @@
             // 
             btn_n1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btn_n1.ForeColor = Color.Turquoise;
-            btn_n1.Location = new Point(136, 295);
+            btn_n1.Location = new Point(131, 295);
             btn_n1.Name = "btn_n1";
             btn_n1.Size = new Size(108, 55);
             btn_n1.TabIndex = 2;
             btn_n1.Text = "CRIPTA";
             btn_n1.UseVisualStyleBackColor = true;
+            btn_n1.Click += btn_n1_Click;
             // 
             // txt_n2
             // 
@@ -94,7 +95,7 @@
             // 
             lbl_n2.AutoSize = true;
             lbl_n2.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_n2.Location = new Point(25, 138);
+            lbl_n2.Location = new Point(12, 138);
             lbl_n2.Name = "lbl_n2";
             lbl_n2.Size = new Size(115, 15);
             lbl_n2.TabIndex = 5;
@@ -115,7 +116,7 @@
             lbl_n4.AutoSize = true;
             lbl_n4.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_n4.ForeColor = Color.Red;
-            lbl_n4.Location = new Point(138, 206);
+            lbl_n4.Location = new Point(133, 206);
             lbl_n4.Name = "lbl_n4";
             lbl_n4.Size = new Size(106, 15);
             lbl_n4.TabIndex = 7;
@@ -123,7 +124,7 @@
             // 
             // txt_n3
             // 
-            txt_n3.Location = new Point(144, 231);
+            txt_n3.Location = new Point(136, 231);
             txt_n3.Name = "txt_n3";
             txt_n3.Size = new Size(100, 23);
             txt_n3.TabIndex = 8;
@@ -150,7 +151,7 @@
             // 
             lbl_n6.AutoSize = true;
             lbl_n6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_n6.Location = new Point(153, 401);
+            lbl_n6.Location = new Point(144, 401);
             lbl_n6.Name = "lbl_n6";
             lbl_n6.Size = new Size(71, 20);
             lbl_n6.TabIndex = 11;
@@ -160,7 +161,7 @@
             // 
             lbl_n7.AutoSize = true;
             lbl_n7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_n7.Location = new Point(556, 401);
+            lbl_n7.Location = new Point(557, 401);
             lbl_n7.Name = "lbl_n7";
             lbl_n7.Size = new Size(71, 20);
             lbl_n7.TabIndex = 12;
