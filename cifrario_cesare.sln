@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37027.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cifrario_cesare", "cifrario_cesare\cifrario_cesare.csproj", "{6602D48D-622F-4070-B756-25548F5CCE11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6602D48D-622F-4070-B756-25548F5CCE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6602D48D-622F-4070-B756-25548F5CCE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6602D48D-622F-4070-B756-25548F5CCE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6602D48D-622F-4070-B756-25548F5CCE11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD1B5EB1-52C4-4FFB-BD2C-432E41EE5F7F}
+	EndGlobalSection
+EndGlobal
