@@ -10,15 +10,15 @@ namespace cifrario_cesare
         private void btn_n1_Click(object sender, EventArgs e)
         {
             string testoOriginale = txt_stringa1.Text;
-            int chiave = Convert.ToInt32(txt_chiave.Text);
+            int chiave = 0;
             string testorisultato = "";
             chiave = chiave % 26;
-            
-            if (  string.IsNullOrEmpty(testoOriginale))
-            {
-                MessageBox.Show("il carattere non è stato inserito");
-            }
 
+            if (!int.TryParse(txt_chiave.Text, out chiave))
+            {
+                MessageBox.Show("Per favore, inserisci un numero valido nella casella della chiave e della stringa!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             else
             {
                 for (int i = 0; i < txt_stringa1.Text.Length; i++)
@@ -42,8 +42,30 @@ namespace cifrario_cesare
                         testorisultato = testorisultato + nuovocarattere;
                     }
 
-                    
+                    else if(carattere >= 'a' && carattere <= 'z')
+                    {
+                        char nuovocarattere = (char)(carattere + chiave);
+
+                        if (nuovocarattere > 'z')
+                        {
+                            nuovocarattere = (char)(nuovocarattere - 26);
+                        }
+
+                        if (nuovocarattere < 'a')
+                        {
+                            nuovocarattere = (char)(nuovocarattere + 26);
+                        }
+
+                        testorisultato = testorisultato + nuovocarattere;
+                    }
+
+                     else
+                     {
+                        testorisultato = testorisultato + carattere;
+                     }
                 }
+
+                lbl_risultato1.Text = "RISULTATO: " + testorisultato;
 
 
             }

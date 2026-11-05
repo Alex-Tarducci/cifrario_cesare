@@ -131,7 +131,7 @@
             // 
             lbl_risultato1.AutoSize = true;
             lbl_risultato1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_risultato1.Location = new Point(153, 295);
+            lbl_risultato1.Location = new Point(133, 294);
             lbl_risultato1.Name = "lbl_risultato1";
             lbl_risultato1.Size = new Size(71, 20);
             lbl_risultato1.TabIndex = 11;
@@ -141,7 +141,7 @@
             // 
             lbl_risultato2.AutoSize = true;
             lbl_risultato2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_risultato2.Location = new Point(659, 295);
+            lbl_risultato2.Location = new Point(645, 295);
             lbl_risultato2.Name = "lbl_risultato2";
             lbl_risultato2.Size = new Size(71, 20);
             lbl_risultato2.TabIndex = 12;
