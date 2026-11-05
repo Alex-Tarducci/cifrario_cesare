@@ -9,7 +9,9 @@ namespace cifrario_cesare
 
         private void btn_n1_Click(object sender, EventArgs e)
         {
-            string carattere = txt_n1.Text;
+            string carattere = txt_stringa1.Text;
+            int chiave = Convert.ToInt32
+            string risultato = "";
             
             if (  string.IsNullOrEmpty(carattere))
             {
@@ -18,7 +20,7 @@ namespace cifrario_cesare
 
             else
             {
-                for (int i = 0; i < txt_n1.Text.Length; i++)
+                for (int i = 0; i < txt_stringa1.Text.Length; i++)
                 { 
 
                 }
