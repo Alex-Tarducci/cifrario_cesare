@@ -63,7 +63,7 @@
             // 
             btn_cripta1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btn_cripta1.ForeColor = Color.Turquoise;
-            btn_cripta1.Location = new Point(131, 295);
+            btn_cripta1.Location = new Point(133, 199);
             btn_cripta1.Name = "btn_cripta1";
             btn_cripta1.Size = new Size(108, 55);
             btn_cripta1.TabIndex = 2;
@@ -112,17 +112,17 @@
             // lbl_n4
             // 
             lbl_n4.AutoSize = true;
-            lbl_n4.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_n4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_n4.ForeColor = Color.Red;
-            lbl_n4.Location = new Point(133, 206);
+            lbl_n4.Location = new Point(343, 290);
             lbl_n4.Name = "lbl_n4";
-            lbl_n4.Size = new Size(106, 15);
+            lbl_n4.Size = new Size(168, 25);
             lbl_n4.TabIndex = 7;
             lbl_n4.Text = "inserisci la chiave";
             // 
             // txt_chiave
             // 
-            txt_chiave.Location = new Point(136, 231);
+            txt_chiave.Location = new Point(374, 331);
             txt_chiave.Name = "txt_chiave";
             txt_chiave.Size = new Size(100, 23);
             txt_chiave.TabIndex = 8;
@@ -131,7 +131,7 @@
             // 
             lbl_risultato1.AutoSize = true;
             lbl_risultato1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_risultato1.Location = new Point(144, 401);
+            lbl_risultato1.Location = new Point(153, 295);
             lbl_risultato1.Name = "lbl_risultato1";
             lbl_risultato1.Size = new Size(71, 20);
             lbl_risultato1.TabIndex = 11;
@@ -151,6 +151,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(800, 450);
             Controls.Add(lbl_risultato2);
             Controls.Add(lbl_risultato1);
