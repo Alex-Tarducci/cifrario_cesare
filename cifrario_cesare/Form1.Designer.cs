@@ -39,16 +39,18 @@
             txt_chiave = new TextBox();
             lbl_risultato1 = new Label();
             lbl_risultato2 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lbl_n1
             // 
             lbl_n1.AutoSize = true;
-            lbl_n1.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_n1.ForeColor = Color.Turquoise;
-            lbl_n1.Location = new Point(144, 24);
+            lbl_n1.Font = new Font("Stencil", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_n1.ForeColor = Color.Lime;
+            lbl_n1.Location = new Point(158, 9);
             lbl_n1.Name = "lbl_n1";
-            lbl_n1.Size = new Size(493, 65);
+            lbl_n1.Size = new Size(513, 57);
             lbl_n1.TabIndex = 0;
             lbl_n1.Text = "CIFRARIO DI CESARE";
             // 
@@ -61,8 +63,8 @@
             // 
             // btn_cripta1
             // 
-            btn_cripta1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btn_cripta1.ForeColor = Color.Turquoise;
+            btn_cripta1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_cripta1.ForeColor = Color.Lime;
             btn_cripta1.Location = new Point(133, 199);
             btn_cripta1.Name = "btn_cripta1";
             btn_cripta1.Size = new Size(108, 55);
@@ -73,16 +75,16 @@
             // 
             // txt_stringa2
             // 
-            txt_stringa2.Location = new Point(645, 135);
+            txt_stringa2.Location = new Point(670, 135);
             txt_stringa2.Name = "txt_stringa2";
             txt_stringa2.Size = new Size(100, 23);
             txt_stringa2.TabIndex = 3;
             // 
             // btn_cripta2
             // 
-            btn_cripta2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btn_cripta2.ForeColor = Color.Turquoise;
-            btn_cripta2.Location = new Point(645, 199);
+            btn_cripta2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_cripta2.ForeColor = Color.Lime;
+            btn_cripta2.Location = new Point(670, 199);
             btn_cripta2.Name = "btn_cripta2";
             btn_cripta2.Size = new Size(100, 55);
             btn_cripta2.TabIndex = 4;
@@ -104,7 +106,7 @@
             // 
             lbl_n3.AutoSize = true;
             lbl_n3.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_n3.Location = new Point(518, 138);
+            lbl_n3.Location = new Point(541, 138);
             lbl_n3.Name = "lbl_n3";
             lbl_n3.Size = new Size(110, 15);
             lbl_n3.TabIndex = 6;
@@ -113,20 +115,21 @@
             // lbl_n4
             // 
             lbl_n4.AutoSize = true;
-            lbl_n4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lbl_n4.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_n4.ForeColor = Color.Red;
-            lbl_n4.Location = new Point(343, 290);
+            lbl_n4.Location = new Point(296, 333);
             lbl_n4.Name = "lbl_n4";
-            lbl_n4.Size = new Size(168, 25);
+            lbl_n4.Size = new Size(215, 32);
             lbl_n4.TabIndex = 7;
             lbl_n4.Text = "inserisci la chiave";
             // 
             // txt_chiave
             // 
-            txt_chiave.Location = new Point(374, 331);
+            txt_chiave.Location = new Point(352, 368);
             txt_chiave.Name = "txt_chiave";
             txt_chiave.Size = new Size(100, 23);
             txt_chiave.TabIndex = 8;
+            txt_chiave.TextAlign = HorizontalAlignment.Center;
             // 
             // lbl_risultato1
             // 
@@ -142,18 +145,30 @@
             // 
             lbl_risultato2.AutoSize = true;
             lbl_risultato2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbl_risultato2.Location = new Point(645, 295);
+            lbl_risultato2.Location = new Point(670, 294);
             lbl_risultato2.Name = "lbl_risultato2";
             lbl_risultato2.Size = new Size(71, 20);
             lbl_risultato2.TabIndex = 12;
             lbl_risultato2.Text = "risultato";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.images;
+            pictureBox1.Location = new Point(281, 92);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(245, 238);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(lbl_risultato2);
             Controls.Add(lbl_risultato1);
             Controls.Add(txt_chiave);
@@ -168,6 +183,7 @@
             Name = "Form1";
             RightToLeft = RightToLeft.No;
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,5 +201,6 @@
         private TextBox txt_chiave;
         private Label lbl_risultato1;
         private Label lbl_risultato2;
+        private PictureBox pictureBox1;
     }
 }

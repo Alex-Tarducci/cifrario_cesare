@@ -132,5 +132,7 @@ namespace cifrario_cesare
                 lbl_risultato2.Text = "RISULTATO: " + testorisultato;
             }
         }
+
+       
     }
 }
