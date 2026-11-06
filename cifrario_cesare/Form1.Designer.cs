@@ -88,6 +88,7 @@
             btn_cripta2.TabIndex = 4;
             btn_cripta2.Text = "CRIPTA";
             btn_cripta2.UseVisualStyleBackColor = true;
+            btn_cripta2.Click += btn_cripta2_Click;
             // 
             // lbl_n2
             // 
