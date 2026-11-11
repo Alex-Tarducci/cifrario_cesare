@@ -10,8 +10,8 @@ namespace cifrario_cesare
         private void btn_n1_Click(object sender, EventArgs e)
         {
             string testooriginale = txt_stringa1.Text;
-            int chiave = int.Parse(txt_chiave.Text);
-            string testorisultato = "";
+            int chiave;
+           
 
 
             if (!int.TryParse(txt_chiave.Text, out chiave))
