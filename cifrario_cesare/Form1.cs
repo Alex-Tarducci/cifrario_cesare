@@ -9,10 +9,10 @@ namespace cifrario_cesare
 
         private void btn_n1_Click(object sender, EventArgs e)
         {
-            string testoOriginale = txt_stringa1.Text;
-            int chiave = 0;
+            string testooriginale = txt_stringa1.Text;
+            int chiave = int.Parse(txt_chiave.Text);
             string testorisultato = "";
-            chiave = chiave % 26;
+
 
             if (!int.TryParse(txt_chiave.Text, out chiave))
             {
@@ -21,61 +21,51 @@ namespace cifrario_cesare
             }
             else
             {
-                for (int i = 0; i < txt_stringa1.Text.Length; i++)
+                chiave = (chiave % 26 + 26) % 26;
+
+                string testoCifrato = "";
+
+
+                for (int i = 0; i < testooriginale.Length; i++)
                 {
-                    char carattere = testoOriginale[i];
+                    char c = testooriginale[i];
 
-                    if (carattere >= 'A' && carattere <= 'Z')
+
+                    if (c >= 'A' && c <= 'Z')
                     {
-                        char nuovocarattere = (char)(carattere + chiave);
-
-                        if (nuovocarattere > 'Z')
-                        {
-                            nuovocarattere = (char)(nuovocarattere - 26);
-                        }
-
-                        if (nuovocarattere < 'A')
-                        {
-                            nuovocarattere = (char)(nuovocarattere + 26);
-                        }
-
-                        testorisultato = testorisultato + nuovocarattere;
+                        char cifrato = (char)('A' + (c - 'A' + chiave) % 26);
+                        testoCifrato += cifrato;
                     }
 
-                    else if (carattere >= 'a' && carattere <= 'z')
+                    else if (c >= 'a' && c <= 'z')
                     {
-                        char nuovocarattere = (char)(carattere + chiave);
-
-                        if (nuovocarattere > 'z')
-                        {
-                            nuovocarattere = (char)(nuovocarattere - 26);
-                        }
-
-                        if (nuovocarattere < 'a')
-                        {
-                            nuovocarattere = (char)(nuovocarattere + 26);
-                        }
-
-                        testorisultato = testorisultato + nuovocarattere;
+                        char cifrato = (char)('a' + (c - 'a' + chiave) % 26);
+                        testoCifrato += cifrato;
                     }
 
                     else
                     {
-                        testorisultato = testorisultato + carattere;
+                        testoCifrato += c;
                     }
                 }
 
-                lbl_risultato1.Text = "RISULTATO: " + testorisultato;
 
-
+                lbl_risultato1.Text = testoCifrato;
             }
+
+           
+           
         }
+
+
+    
+        
 
         private void btn_cripta2_Click(object sender, EventArgs e)
         {
-            string testoOriginale = txt_stringa2.Text;
+            string testooriginale = txt_stringa2.Text;
             int chiave = 0;
-            string testorisultato = "";
+            
             chiave = chiave % 26;
 
             if (!int.TryParse(txt_chiave.Text, out chiave))
@@ -85,51 +75,36 @@ namespace cifrario_cesare
             }
             else
             {
-                for (int i = 0; i < txt_stringa2.Text.Length; i++)
+                chiave = (chiave % 26 + 26) % 26;
+
+                string testoCifrato = "";
+
+
+                for (int i = 0; i < testooriginale.Length; i++)
                 {
-                    char carattere = testoOriginale[i];
+                    char c = testooriginale[i];
 
-                    if (carattere >= 'A' && carattere <= 'Z')
+
+                    if (c >= 'A' && c <= 'Z')
                     {
-                        char nuovocarattere = (char)(carattere - chiave);
-
-                        if (nuovocarattere > 'Z')
-                        {
-                            nuovocarattere = (char)(nuovocarattere - 26);
-                        }
-
-                        if (nuovocarattere < 'A')
-                        {
-                            nuovocarattere = (char)(nuovocarattere + 26);
-                        }
-
-                        testorisultato = testorisultato + nuovocarattere;
+                        char cifrato = (char)('A' + (c + 'A' + chiave) % 26);
+                        testoCifrato += cifrato;
                     }
 
-                    else if (carattere >= 'a' && carattere <= 'z')
+                    else if (c >= 'a' && c <= 'z')
                     {
-                        char nuovocarattere = (char)(carattere - chiave);
-
-                        if (nuovocarattere > 'z')
-                        {
-                            nuovocarattere = (char)(nuovocarattere - 26);
-                        }
-
-                        if (nuovocarattere < 'a')
-                        {
-                            nuovocarattere = (char)(nuovocarattere + 26);
-                        }
-
-                        testorisultato = testorisultato + nuovocarattere;
+                        char cifrato = (char)('a' + (c + 'a' + chiave) % 26);
+                        testoCifrato += cifrato;
                     }
 
                     else
                     {
-                        testorisultato = testorisultato + carattere;
+                        testoCifrato += c;
                     }
                 }
 
-                lbl_risultato2.Text = "RISULTATO: " + testorisultato;
+
+                lbl_risultato2.Text = testoCifrato;
             }
         }
 
