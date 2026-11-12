@@ -7,16 +7,21 @@ namespace cifrario_cesare
             InitializeComponent();
         }
 
-        private void btn_n1_Click(object sender, EventArgs e)
+        private void btn_cripta_Click(object sender, EventArgs e)
         {
             string testooriginale = txt_stringa1.Text;
-            int chiave;
-           
 
-
-            if (!int.TryParse(txt_chiave.Text, out chiave))
+            if (string.IsNullOrWhiteSpace(txt_stringa1.Text))
             {
-                MessageBox.Show("Per favore, inserisci un numero valido nella casella della chiave e della stringa!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La casella della stringa non può essere vuota!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_stringa1.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txt_chiave.Text, out int chiave))
+            {
+                MessageBox.Show("Per favore, inserisci una chiave!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_chiave.Focus();
                 return;
             }
             else
@@ -61,21 +66,26 @@ namespace cifrario_cesare
     
         
 
-        private void btn_cripta2_Click(object sender, EventArgs e)
+        private void btn_decripta_Click(object sender, EventArgs e)
         {
             string testooriginale = txt_stringa2.Text;
-            int chiave = 0;
-            
-            chiave = chiave % 26;
 
-            if (!int.TryParse(txt_chiave.Text, out chiave))
+            if (string.IsNullOrWhiteSpace(txt_stringa2.Text))
             {
-                MessageBox.Show("Per favore, inserisci un numero valido nella casella della chiave e della stringa!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+               MessageBox.Show("La casella della stringa non può essere vuota!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               txt_stringa2.Focus();
+              return;
+            }
+
+            if (!int.TryParse(txt_chiave.Text, out int chiave))
+            {
+               MessageBox.Show("Per favore, inserisci una chiave!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               txt_chiave.Focus();
+             return;
             }
             else
             {
-                chiave = (chiave % 26 + 26) % 26;
+                chiave = (-chiave % 26 + 26) % 26;
 
                 string testoCifrato = "";
 
@@ -87,13 +97,13 @@ namespace cifrario_cesare
 
                     if (c >= 'A' && c <= 'Z')
                     {
-                        char cifrato = (char)('A' + (c + 'A' + chiave) % 26);
+                        char cifrato = (char)('A' + (c - 'A' + chiave) % 26);
                         testoCifrato += cifrato;
                     }
 
                     else if (c >= 'a' && c <= 'z')
                     {
-                        char cifrato = (char)('a' + (c + 'a' + chiave) % 26);
+                        char cifrato = (char)('a' + (c - 'a' + chiave) % 26);
                         testoCifrato += cifrato;
                     }
 

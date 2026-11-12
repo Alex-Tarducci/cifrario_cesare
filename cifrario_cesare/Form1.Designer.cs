@@ -32,7 +32,7 @@
             txt_stringa1 = new TextBox();
             btn_cripta1 = new Button();
             txt_stringa2 = new TextBox();
-            btn_cripta2 = new Button();
+            btn_decripta = new Button();
             lbl_n2 = new Label();
             lbl_n3 = new Label();
             lbl_n4 = new Label();
@@ -71,26 +71,25 @@
             btn_cripta1.TabIndex = 2;
             btn_cripta1.Text = "CRIPTA";
             btn_cripta1.UseVisualStyleBackColor = true;
-            btn_cripta1.Click += btn_n1_Click;
             // 
             // txt_stringa2
             // 
             txt_stringa2.Location = new Point(670, 135);
             txt_stringa2.Name = "txt_stringa2";
-            txt_stringa2.Size = new Size(100, 23);
+            txt_stringa2.Size = new Size(118, 23);
             txt_stringa2.TabIndex = 3;
             // 
-            // btn_cripta2
+            // btn_decripta
             // 
-            btn_cripta2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btn_cripta2.ForeColor = Color.Lime;
-            btn_cripta2.Location = new Point(670, 199);
-            btn_cripta2.Name = "btn_cripta2";
-            btn_cripta2.Size = new Size(100, 55);
-            btn_cripta2.TabIndex = 4;
-            btn_cripta2.Text = "CRIPTA";
-            btn_cripta2.UseVisualStyleBackColor = true;
-            btn_cripta2.Click += btn_cripta2_Click;
+            btn_decripta.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_decripta.ForeColor = Color.Lime;
+            btn_decripta.Location = new Point(670, 199);
+            btn_decripta.Name = "btn_decripta";
+            btn_decripta.Size = new Size(118, 55);
+            btn_decripta.TabIndex = 4;
+            btn_decripta.Text = "DECRIPTA";
+            btn_decripta.UseVisualStyleBackColor = true;
+            btn_decripta.Click += btn_cripta_Click;
             // 
             // lbl_n2
             // 
@@ -117,7 +116,7 @@
             lbl_n4.AutoSize = true;
             lbl_n4.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lbl_n4.ForeColor = Color.Red;
-            lbl_n4.Location = new Point(296, 333);
+            lbl_n4.Location = new Point(295, 333);
             lbl_n4.Name = "lbl_n4";
             lbl_n4.Size = new Size(215, 32);
             lbl_n4.TabIndex = 7;
@@ -160,7 +159,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
-           
             // 
             // Form1
             // 
@@ -175,7 +173,7 @@
             Controls.Add(lbl_n4);
             Controls.Add(lbl_n3);
             Controls.Add(lbl_n2);
-            Controls.Add(btn_cripta2);
+            Controls.Add(btn_decripta);
             Controls.Add(txt_stringa2);
             Controls.Add(btn_cripta1);
             Controls.Add(txt_stringa1);
@@ -194,7 +192,7 @@
         private TextBox txt_stringa1;
         private Button btn_cripta1;
         private TextBox txt_stringa2;
-        private Button btn_cripta2;
+        private Button btn_decripta;
         private Label lbl_n2;
         private Label lbl_n3;
         private Label lbl_n4;
